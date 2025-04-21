@@ -1,0 +1,41 @@
+# Model configuration
+model:
+  name: "LayoutEstimationNetwork"
+  backbone: "resnet18"  # Options: resnet18, resnet34, resnet50
+  pretrained: true
+  dropout: 0.5
+
+# Training configuration
+train:
+  batch_size: 32
+  num_workers: 4
+  epochs: 50
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  lr_scheduler: true
+  lr_step_size: 10
+  lr_gamma: 0.5
+  save_dir: "checkpoints"
+  resume: ""  # Path to checkpoint to resume from
+
+# Dataset configuration
+dataset:
+  name: "Pix3D"
+  root_dir: "data/pix3d"
+  img_size: 256
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  data_augmentation: true
+
+# Loss configuration
+loss:
+  layout_weight: 1.0
+  camera_weight: 0.5
+  regularization_weight: 0.01
+
+# Testing/Demo configuration
+test:
+  checkpoint: "best_model.pth"
+  output_dir: "outputs"
+  visualization: true

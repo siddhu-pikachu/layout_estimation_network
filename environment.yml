@@ -1,0 +1,19 @@
+name: LayoutEstimation
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip>=21.0
+  - pytorch
+  - torchvision
+  - numpy
+  - pillow
+  - pyyaml
+  - matplotlib
+  - tqdm
+  - scikit-learn
+  - pip:
+    - opencv-python
+    - vtk
