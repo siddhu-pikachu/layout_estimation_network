@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layout Estimation Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .image-container { display: flex; flex-wrap: wrap; }
+        .image-item { margin: 10px; text-align: center; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Layout Estimation Results</h1>
+    <h2>Input Image</h2>
+    <img src='../../pix3d/img/bed/0001.png' style='max-width: 500px;'><br>
+    <h2>Estimated Layout Parameters</h2>
+    <table>
+        <tr><th>Parameter</th><th>Value</th></tr>
+        <tr><td>Centroid (x, y, z)</td><td>0.0098, -0.0092, 7.0757</td></tr>
+        <tr><td>Size (width, height, depth)</td><td>3.5912, 2.7208, 4.4801</td></tr>
+        <tr><td>Orientation</td><td>-0.0000 radians</td></tr>
+        <tr><td>Camera Pitch</td><td>0.0812 radians</td></tr>
+        <tr><td>Camera Roll</td><td>-0.9711 radians</td></tr>
+    </table>
+    <h2>Visualizations</h2>
+    <div class='image-container'>
+        <div class='image-item'>
+            <img src='0001_layout.png' style='width: 500px;'><br>
+            <p>3D Layout Estimation</p>
+        </div>
+        <div class='image-item'>
+            <img src='0001_view_1.png' style='width: 300px;'><br>
+            <p>View 1</p>
+        </div>
+        <div class='image-item'>
+            <img src='0001_view_2.png' style='width: 300px;'><br>
+            <p>View 2</p>
+        </div>
+        <div class='image-item'>
+            <img src='0001_view_3.png' style='width: 300px;'><br>
+            <p>View 3</p>
+        </div>
+        <div class='image-item'>
+            <img src='0001_view_4.png' style='width: 300px;'><br>
+            <p>View 4</p>
+        </div>
+    </div>
+    <h2>3D Model</h2>
+    <p>Download the <a href='0001_layout.obj'>3D model</a> (OBJ format)</p>
+</body>
+</html>
